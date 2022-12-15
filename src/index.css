@@ -16,4 +16,7 @@ code {
 
 :root {
   --text-color: white;
+  --purple-color:rgb(108,76,239);
+  --black-color :rgb(18,19,18);
+  --background-color:rgb(13,13,12);
 }
