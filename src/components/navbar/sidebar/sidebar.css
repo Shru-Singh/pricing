@@ -1,0 +1,51 @@
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  min-width: 100vw;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    background: var(--text-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 320px;
+    z-index: 200;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    cursor: pointer;
+}
+.sidebar .cross {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: clamp(240px, 19.4vw, 280px);
+}
+.sidebar img {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.sidebar .menuList {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.sidebar .menuListItem {
+  margin: 5px 30px;
+}
+
+.sidebar p {
+    color: black;
+  font-size: 1.25rem;
+}
+

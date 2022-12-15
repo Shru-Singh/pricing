@@ -1,0 +1,95 @@
+.header {
+  width: 100%;
+  height: 72px;
+  margin-top: clamp(7px, 1.5vw, 25px);
+  margin-bottom: clamp(20px, 4.5vw, 60px);
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: var(--text-color);
+}
+
+.headerContainer {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 3%;
+  margin: 0 auto;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+.babynama {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: 700;
+  font-size: clamp(22px, 4.5vw, 36px);
+  padding: 8px 16px 8px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.drawerOpener {
+  margin: 0px 10px;
+  margin-top: 5px;
+  display: none;
+}
+li {
+  text-decoration: none;
+}
+.menuList {
+  display: flex;
+  align-items: center;
+}
+.menuListItemAct {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.menuListItem {
+  margin-left: 35px;
+}
+p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+p:hover {
+  color: var(--text-color);
+  font-weight: 700;
+}
+p.active {
+  color: var(--text-color);
+  font-weight: 700;
+}
+img {
+    width: 30px;
+    height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header .menuList{
+      display: none;
+    }
+    .headerContainer{
+      width: 95%;
+    }
+    .debsoc{
+      left: 10px;
+      padding: 0px;
+    }
+    .drawerOpener {
+        display: block;
+    }
+  }
