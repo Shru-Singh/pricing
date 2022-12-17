@@ -1,0 +1,34 @@
+{
+    "plans": [
+        {
+            "id":"0",
+            "WhatsApp_Group": "8 am - 11 pm",
+            "Basic_Medical_Queries": "Unlimited",
+            "Private_Chat": " With dedicated Pediatrician",
+            "Video_Consultation" :"6 free consultations (Pediatrician/ Gynaecologist/ Nutritionists/ Lactation)",
+            "Additional_Consultations":"20% Discount",
+            "Growth_tracking_for_baby":"Monthly",
+            "Plan_Cost" : "1234"
+        },
+        {
+            "id":"1",
+            "WhatsApp_Group": "8 am - 11 pm",
+            "Basic_Medical_Queries": "Unlimited",
+            "Private_Chat": "NA",
+            "Video_Consultation" :"2 Free Consultations (Pediatrician Only)",
+            "Additional_Consultations":"20% Discount",
+            "Growth_tracking_for_baby":"Not Included",
+            "Plan_Cost" : "1000"
+        },
+        {
+            "id" :"2",
+            "WhatsApp_Group": "8 am - 11 pm",
+            "Basic_Medical_Queries": "Unlimited",
+            "Private_Chat": "NA",
+            "Video_Consultation" :"No free consultations",
+            "Additional_Consultations":"20% Discount",
+            "Growth_tracking_for_baby":"Not Included",
+            "Plan_Cost":"800"
+        }
+    ]
+}

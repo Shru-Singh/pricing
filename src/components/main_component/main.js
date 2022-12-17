@@ -1,5 +1,5 @@
 import "./main.css";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -7,10 +7,30 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function Main() {
-  const [age, setAge] = useState("");
+  const [duration, setDuration] = useState('');
+  const [cost, setCost] = useState(1);
+  const [data,setData]=useState([]);
+  const url = 'data.json';
+
+
+  const getData = useCallback(async () => {
+
+    const response = await fetch(url);    
+    const past = await response.json();
+    const events = past.plans;
+    console.log(events)  
+    setData(events);
+
+  }, [url]);
+
+  useEffect(() => {
+    getData();
+  }, [url, getData]);
+
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setDuration(event.target.value);
+    setCost(event.target.value);
   };
 
   return (
@@ -20,7 +40,8 @@ export default function Main() {
         <h2>Get Pediatrician led holistic care for your baby</h2>
       </div>
       <div className="cards">
-        <div className="card">
+        {data.map((item)=>
+        <div className="card" key={item.id}>
           <div className="heading">
             <h2>Premium Care</h2>
           </div>
@@ -28,47 +49,40 @@ export default function Main() {
             <div className="listItem">
               <p>
                 WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+                <span> {item.WhatsApp_Group}</span>
               </p>
             </div>
             <div className="listItem">
               <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+              Basic Medical Queries:
+                <span> {item.Basic_Medical_Queries}</span>
               </p>
             </div>
             <div className="listItem">
               <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+              Private Chat:
+                <span> {item.Private_Chat}</span>
               </p>
             </div>
             <div className="listItem">
               <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+              Video Consultation:
+                <span> {item.Video_Consultation}</span>
               </p>
             </div>
             <div className="listItem">
               <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+              Additional Consultations :
+                <span> {item.Additional_Consultations}</span>
               </p>
             </div>
             <div className="listItem">
               <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
+              Growth tracking for baby:
+                <span> {item.Growth_tracking_for_baby}</span>
               </p>
             </div>
             <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span>8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
                 Select Duration:
                 <Box sx={{ minWidth: 120 }}>
                   <FormControl fullWidth>
@@ -76,119 +90,27 @@ export default function Main() {
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      value={age}
-                      label="Age"
+                      value={duration}
+                      label="Duration"
                       onChange={handleChange}
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value={1}>1 month</MenuItem>
+                      <MenuItem value={3}>3 months</MenuItem>
+                      <MenuItem value={6}>6 months</MenuItem>
                     </Select>
                   </FormControl>
                 </Box>
+            </div>
+            <div className="listItem">
+              <p>
+                Plan Cost:
+                 <span> ${item.Plan_Cost*cost}</span>
               </p>
             </div>
           </div>
         </div>
-        <div className="card">
-          <div className="heading">
-            <h2>Premium Care</h2>
-          </div>
-          <div className="body">
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span>8 am - 11 pm</span>
-              </p>
-            </div>
-          </div>
+        )}
         </div>
-        <div className="card">
-          <div className="heading">
-            <h2>Premium Care</h2>
-          </div>
-          <div className="body">
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span> 8 am - 11 pm</span>
-              </p>
-            </div>
-            <div className="listItem">
-              <p>
-                WhatsApp Group:
-                <span>8 am - 11 pm</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
