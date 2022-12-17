@@ -46,9 +46,6 @@ span:hover {
 #form {
     border-color: var(--text-color) !important;
 }
-img {
-    filter: invert(100%) !important;
-}
 #demo-simple-select-label {
     color: var(--text-color) !important; 
 }
@@ -60,6 +57,9 @@ img {
 }
 .MuiSvgIcon-root {
     color: var(--text-color) !important;
+}
+.MuiOutlinedInput-notchedOutline{
+    border-color: var(--text-color) !important;
 }
 
 .ReactModal__Overlay {

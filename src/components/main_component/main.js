@@ -44,6 +44,17 @@ export default function Main() {
       transform: "translate(-50%, -50%)",
     },
   };
+  const Styles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      width: "280px",
+      transform: "translate(-50%, -50%)",
+    },
+  };
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [boughtIsOpen, setBoughtOpen] = useState(false);
@@ -135,7 +146,7 @@ export default function Main() {
                   <div className="listItem">
                     Choose PLan Duration:
                     <Box id="box" sx={{ minWidth: 120 }}>
-                      <FormControl fullWidth className="form">
+                      <FormControl fullWidth id="form">
                         <InputLabel id="demo-simple-select-label">
                           Duration
                         </InputLabel>
@@ -174,7 +185,7 @@ export default function Main() {
       <Modal
         isOpen={boughtIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
+        style={Styles}
       >
         {bill >0 ? (<h2>Thank you for purchasing our plan!</h2>) : (<h2>Yoh haven't selected any plan!</h2>)}
         <button className="btn" onClick={closeModal}>close</button>
