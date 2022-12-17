@@ -34,7 +34,9 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
+.babynama span {
+  color: var(--purple-color);
+}
 .headerRight {
   display: flex;
   align-items: center;
@@ -66,7 +68,8 @@ p {
   font-size: clamp(14px, 1.5vw, 18px);
 }
 p:hover {
-  color: var(--text-color);
+  color: var(--purple-color);
+  cursor: pointer;
   font-weight: 700;
 }
 p.active {

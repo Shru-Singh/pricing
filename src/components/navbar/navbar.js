@@ -18,7 +18,7 @@ function Navbar({ page }) {
     <div className="header">
       <div className="headerContainer">
         <div className="headerLeft">
-          <div className="babynama">BabyNama</div>
+          <div className="babynama">Baby<span>Nama</span></div>
         </div>
         <div className="headerRight">
           <div className="menuList">

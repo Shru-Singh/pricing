@@ -10,7 +10,7 @@
 
 .sidebar {
     height: 100%;
-    background: var(--text-color);
+    background: var(--black-color);
     position: fixed;
     top: 0;
     right: 0;
@@ -45,7 +45,15 @@
 }
 
 .sidebar p {
-    color: black;
+    color: var(--text-color);
   font-size: 1.25rem;
+  margin: 3px;
+}
+.cross img {
+  filter: invert(100%);
 }
 
+.sidebar p:hover {
+  color: var(--purple-color);
+  cursor: pointer;
+}

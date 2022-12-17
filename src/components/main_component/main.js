@@ -123,7 +123,8 @@ export default function Main() {
                 Plan Cost:
                 <span> ${item.Plan_Cost} for one month</span>
               </div>
-              <button onClick={(e) => openModal(e, i)}>Select Plan</button>
+              <div className="select">
+              <button className="btn" onClick={(e) => openModal(e, i)}>Select Plan</button></div>
               <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -154,8 +155,10 @@ export default function Main() {
                     <div className="">Total Plan Cost : {dataItem * cost}</div>
                   </div>
                 </form>
-                <button onClick={closeModal}>close</button>
-                <button onClick={planModal}>Add Plan</button>
+                <div className="buyButtons">
+                <button className="btn" onClick={closeModal}>close</button>
+                <button className="btn" onClick={planModal}>Add Plan</button>
+                </div>
               </Modal>
             </div>
           </div>
@@ -164,15 +167,17 @@ export default function Main() {
       <div className="cost">
         <h2>Total Purchase Cost : $ {bill}</h2>
       </div>
-      <button onClick={boughtModal}>Buy</button>
-      <button onClick={purchaseModal}>Clear Purchase</button>
+      <div className="buyButtons">
+      <button className="btn" onClick={boughtModal}>Buy</button>
+      <button  className="btn" onClick={purchaseModal}>Clear Purchase</button>
+      </div>
       <Modal
         isOpen={boughtIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <h2>Thank you for purchasing our plan!</h2>
-        <button onClick={closeModal}>close</button>
+        {bill >0 ? (<h2>Thank you for purchasing our plan!</h2>) : (<h2>Yoh haven't selected any plan!</h2>)}
+        <button className="btn" onClick={closeModal}>close</button>
       </Modal>
     </>
   );
