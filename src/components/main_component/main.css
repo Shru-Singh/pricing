@@ -5,6 +5,7 @@
 .main h2{
     color: grey;
 }
+
 .cards {
   color: var(--text-color);
   display: flex;
@@ -48,4 +49,15 @@
 }
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
     color: var(--text-color) !important;
+}
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.342) !important;
+}
+.ReactModal__Content {
+    background-color: var(--black-color) !important;
+    color: var(--text-color) !important;
+}
+.cost {
+    color: var(--text-color);
+    text-align: center;
 }
