@@ -134,8 +134,8 @@ export default function Main() {
                 <form>
                   <div className="listItem">
                     Choose PLan Duration:
-                    <Box sx={{ minWidth: 120 }}>
-                      <FormControl fullWidth>
+                    <Box id="box" sx={{ minWidth: 120 }}>
+                      <FormControl fullWidth className="form">
                         <InputLabel id="demo-simple-select-label">
                           Duration
                         </InputLabel>

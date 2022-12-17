@@ -43,24 +43,25 @@ span:hover {
     color: var(--text-color);
 }
 
-.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
-    color: var(--text-color) !important; 
-}
-.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
-    color: var(--text-color);
-}
-.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
-    color: var(--text-color) !important;
-}
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+#form {
     border-color: var(--text-color) !important;
 }
-.css-ece9u5 {
-    margin: 20px 0px;
+img {
+    filter: invert(100%) !important;
 }
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+#demo-simple-select-label {
+    color: var(--text-color) !important; 
+}
+#demo-simple-select {
+    color: var(--text-color) !important; 
+}
+#box {
+    margin: 20px 0px !important;
+}
+.MuiSvgIcon-root {
     color: var(--text-color) !important;
 }
+
 .ReactModal__Overlay {
     background-color: rgba(0, 0, 0, 0.342) !important;
 }
